@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoPlayer", "VideoPlayer\VideoPlayer.csproj", "{A49E99D0-53E6-4D5A-B761-5EFA21FE95ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{D4CB88FF-08BF-407E-B59C-AEA8B365BE45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A49E99D0-53E6-4D5A-B761-5EFA21FE95ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A49E99D0-53E6-4D5A-B761-5EFA21FE95ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A49E99D0-53E6-4D5A-B761-5EFA21FE95ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A49E99D0-53E6-4D5A-B761-5EFA21FE95ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4CB88FF-08BF-407E-B59C-AEA8B365BE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4CB88FF-08BF-407E-B59C-AEA8B365BE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4CB88FF-08BF-407E-B59C-AEA8B365BE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4CB88FF-08BF-407E-B59C-AEA8B365BE45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D64C6F5-A385-4B47-BEEB-FA907FE67F4B}
+	EndGlobalSection
+EndGlobal
