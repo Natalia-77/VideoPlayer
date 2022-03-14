@@ -10,6 +10,7 @@ using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Text;
+using VideoPlayer.Helper;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
@@ -23,7 +24,14 @@ builder.Services.AddDbContext<AppDbContext>((DbContextOptionsBuilder options) =>
 //builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 // For Identity
-builder.Services.AddIdentity<AppUser, AppRole>()
+builder.Services.AddIdentity<AppUser, AppRole>(option =>
+{
+    option.Password.RequireDigit = false;
+    option.Password.RequiredLength = 5;
+    option.Password.RequireNonAlphanumeric = false;
+    option.Password.RequireUppercase = false;
+    option.Password.RequireLowercase = false;
+})
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
@@ -97,7 +105,7 @@ app.UseRouting();
 // Authentication & Authorization
 app.UseAuthentication();
 app.UseAuthorization();
-
+//await app.AdminSeedData();
 app.UseCors(x => x
             .AllowAnyOrigin()
             .AllowAnyMethod()
