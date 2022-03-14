@@ -11,10 +11,11 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Text;
 using VideoPlayer.Helper;
+using VideoPlayer.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-ConfigurationManager configuration = builder.Configuration;
 
+ConfigurationManager configuration = builder.Configuration;
 
 builder.Services.AddDbContext<AppDbContext>((DbContextOptionsBuilder options) =>
 
@@ -35,6 +36,9 @@ builder.Services.AddIdentity<AppUser, AppRole>(option =>
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
+//Configuration from AppSettings
+var appSettingSection = configuration.GetSection("AppSetting");
+builder.Services.Configure<AppSetting>(appSettingSection);
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>
@@ -53,7 +57,7 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,        
         ValidateIssuer = false,
         ValidateAudience = false,            
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Key"]))
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["AppSetting:Key"]))
     };
 });
 
@@ -105,7 +109,7 @@ app.UseRouting();
 // Authentication & Authorization
 app.UseAuthentication();
 app.UseAuthorization();
-//await app.AdminSeedData();
+await app.AdminSeedData();
 app.UseCors(x => x
             .AllowAnyOrigin()
             .AllowAnyMethod()
