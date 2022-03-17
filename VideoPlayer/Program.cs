@@ -1,5 +1,7 @@
 using Domain;
 using Domain.Identity;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +14,8 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Text;
 using VideoPlayer.Helper;
 using VideoPlayer.Models;
+using VideoPlayer.Services;
+using VideoPlayer.Validation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +26,7 @@ builder.Services.AddDbContext<AppDbContext>((DbContextOptionsBuilder options) =>
                options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
 //how use interfaces
-//builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IJwtConfig, JwtConfig>();
 
 // For Identity
 builder.Services.AddIdentity<AppUser, AppRole>(option =>
@@ -62,8 +66,9 @@ builder.Services.AddAuthentication(options =>
 });
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddFluentValidation();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddTransient<IValidator<RegisterViewModel>, UserValidator>();
 builder.Services.AddSwaggerGen((SwaggerGenOptions o) =>
 {
     o.SwaggerDoc("v1", new OpenApiInfo
