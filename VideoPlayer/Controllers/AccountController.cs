@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using VideoPlayer.Constants;
+using VideoPlayer.Models;
 using VideoPlayer.Services;
 
 namespace VideoPlayer.Controllers
@@ -24,6 +26,38 @@ namespace VideoPlayer.Controllers
             _signInManager = signInManager;
             _roleManager = roleManager;
             _tokenService = tokenService;
+        }
+
+        [HttpPost]
+        [Route("register")]
+        public async Task<IActionResult> RegisterAsync([FromForm] RegisterViewModel model)
+        {
+            var role = new AppRole
+            {
+                Name = Roles.User
+            };
+            var result1 = _roleManager.CreateAsync(role).Result;
+
+            var user = new AppUser
+            {
+                Email = model.Email,
+                UserName = model.Name                
+
+            };
+           
+            var result = await _userManager.CreateAsync(user, model.Password);
+
+            if (!result.Succeeded)
+                return BadRequest(new { message = result.Errors });
+
+            await _userManager.AddToRoleAsync(user, role.Name);
+
+            await _signInManager.SignInAsync(user, isPersistent: false);
+
+            return Ok(new
+            {
+                token = _tokenService.CreateToken(user)
+            });
         }
 
     }
