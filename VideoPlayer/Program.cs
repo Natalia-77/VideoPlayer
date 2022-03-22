@@ -5,7 +5,6 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -13,6 +12,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Text;
 using VideoPlayer.Helper;
+using VideoPlayer.Mapper;
 using VideoPlayer.Models;
 using VideoPlayer.Services;
 using VideoPlayer.Validation;
@@ -69,6 +69,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddControllersWithViews().AddFluentValidation();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddTransient<IValidator<RegisterViewModel>, UserValidator>();
+builder.Services.AddAutoMapper(typeof(VideosProfile));
 builder.Services.AddSwaggerGen((SwaggerGenOptions o) =>
 {
     o.SwaggerDoc("v1", new OpenApiInfo

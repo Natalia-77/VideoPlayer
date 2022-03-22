@@ -15,7 +15,7 @@ namespace VideoPlayer.Validation
             RuleFor(x => x.Name)
                .NotEmpty().WithMessage("Поле не може бути пустим");
 
-            RuleFor(x => x.Email)
+             RuleFor(x => x.Email)
                .NotEmpty().WithMessage("Поле не може бути пустим!")
                .EmailAddress().WithMessage("Пароль має містити '@'")
                .DependentRules(() =>
