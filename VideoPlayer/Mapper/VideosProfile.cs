@@ -10,7 +10,13 @@ namespace VideoPlayer.Mapper
         {
             CreateMap<Videos, VideoViewModel>()
                 .ForMember(dest => dest.Poster, opt => opt.MapFrom(dest => dest.Poster))
-                .ForMember(dest => dest.Title,opt => opt.MapFrom(dest=>dest.Title))
+                .ForMember(dest => dest.Title, opt => opt.MapFrom(dest => dest.Title))
+                .ForMember(dest => dest.PrewVideoUrl, opt => opt.MapFrom(dest => dest.PrewVideoUrl))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(dest => dest.Description));
+                
+            CreateMap<Videos, VideoItemViewModel>()
+                 .ForMember(dest => dest.Poster, opt => opt.MapFrom(dest => dest.Poster))
+                .ForMember(dest => dest.Title, opt => opt.MapFrom(dest => dest.Title))
                 .ForMember(dest => dest.PrewVideoUrl, opt => opt.MapFrom(dest => dest.PrewVideoUrl))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(dest => dest.Description))
                 .ForMember(dest => dest.VideoUrl, opt => opt.MapFrom(dest => dest.VideoUrl));
