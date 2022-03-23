@@ -35,7 +35,7 @@ namespace VideoPlayer.Controllers
 
             if (res == null)
             {
-                return BadRequest(new { message = "Запису з таким айді не існує" });
+                return BadRequest(new { message = "Запису з таким id не існує" });
             }
 
             return Ok(res);
