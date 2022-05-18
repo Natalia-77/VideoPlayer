@@ -5,6 +5,6 @@ const UserList = React.lazy(
 );
 
 const adminRoutes = [
-  { path: "/users", exact: true, name: "Слухачі", component: UserList },
+  { path: "/admin/users", exact: true, name: "Слухачі", component: UserList },
 ];
 export default adminRoutes;
