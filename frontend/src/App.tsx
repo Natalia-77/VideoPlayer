@@ -6,6 +6,7 @@ import './App.css';
 //import Spinner from './components/common/loader/loader';
 import Owl from './components/common/owlCarousel';
 import TopBar from './components/navbar/topbar';
+import ContactBar from './components/navbar/contact';
 
 function App() {
   return (
@@ -13,7 +14,11 @@ function App() {
     // <Spinner/>
     
     //<Owl/>
-    <TopBar/>
+    <>
+     <TopBar/>
+    <ContactBar/>
+    </>
+   
    
   );
 }

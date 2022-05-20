@@ -1,0 +1,16 @@
+
+.contact__style{
+    visibility: visible;
+    animation-delay:0.1s;
+    animation-name: fadeIn;  
+     
+}
+
+.contact__colorback{
+    background-color: #E9CACA;
+}
+
+.text__fonts{
+    font-family: Brush Script MT, Brush Script Std, cursive!important;
+    /* background-color: rgb(175, 175, 203); */
+}
