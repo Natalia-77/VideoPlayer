@@ -1,0 +1,17 @@
+
+.top__style{
+    visibility: visible;
+    animation-delay:0.1s;
+    animation-name: fadeInІ;
+    
+}
+
+.top__colorback{
+    background-color: #FCE4EC;    
+}
+
+.bread__hover > ol > li > a:hover,.bread__hover > ol > li > a:focus
+{
+    text-decoration-color: navy;
+    color: crimson;
+}

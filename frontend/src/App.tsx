@@ -5,12 +5,15 @@ import { lazy, Suspense } from "react";
 import './App.css';
 //import Spinner from './components/common/loader/loader';
 import Owl from './components/common/owlCarousel';
+import TopBar from './components/navbar/topbar';
 
 function App() {
   return (
     
     // <Spinner/>
-    <Owl/>
+    
+    //<Owl/>
+    <TopBar/>
    
   );
 }
