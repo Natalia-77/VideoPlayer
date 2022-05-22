@@ -2,15 +2,32 @@
 .contact__style{
     visibility: visible;
     animation-delay:0.1s;
-    animation-name: fadeIn;  
+    animation-name: fadeIn;   
      
 }
 
 .contact__colorback{
-    background-color: #E9CACA;
+    /* background: linear-gradient(to right, #7A75D0,#DB96D9); */
+    background: white;
+    box-shadow: 10px 10px 5px rgb(7, 154, 159),-0.5em 0 .5em rgb(7, 154, 159);
+    border-radius: 30px;
+    
 }
 
 .text__fonts{
-    font-family: Brush Script MT, Brush Script Std, cursive!important;
+    font-family: Georgia, serif!important;
     /* background-color: rgb(175, 175, 203); */
+}
+
+.text__fonts > img{
+    height: 100px ;
+    width: 100px ;
+    margin: 15px;
+}
+
+@media(max-width: 575px){
+    .text__fonts > img{
+        height: 70px;
+        width: 70px;
+    }
 }

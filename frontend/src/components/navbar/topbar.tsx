@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const TopBar: React.FC = () => {
 
     return (
-        <div className="container-fluid bg-light px-0 wow fadeIn top__style" data-wow-delay="0.1s">
-            <div className="row gx-0 align-items-center d-none d-lg-flex top__colorback">
-                <div className="col-lg-6 px-5 text-start bread__hover ">
+        <div className="container-lg-fluid bg-light px-0 wow fadeIn top__style" data-wow-delay="0.1s">
+            <div className="row gx-0 align-items-center top__colorback">
+                <div className="col-xl-6 col-md-6 col-sm-12 px-5 text-start bread__hover ">
                     <ol className="breadcrumb mb-0">
                         <li className="breadcrumb-item">
                             <a className="small" href="/">
@@ -26,17 +26,17 @@ const TopBar: React.FC = () => {
                         </li>
                         <li className="breadcrumb-item ">
                             <a className="small" href="/">
-                                Terms
+                                Partners
                             </a>
                         </li>
                     </ol>
                 </div>
-                <div className="col-lg-6 px-5 text-end ">
+                <div className="col-xl-6 col-md-6 col-sm-12 px-5 item__start ">
                     <small>
                         Follow us:
                     </small>
                     <div className=" d-inline-flex align-items-center" >
-                        <a className="btn-square text-primary border-end rounded-0 p-2" href="#" >
+                        <a className="btn-square text-primary border-end rounded-0 p-2" href="https://www.facebook.com/" >
                             <FontAwesomeIcon icon={faFacebook} />
                         </a>
                         <a className="btn-square text-primary border-end rounded-0 p-2" href="#" >

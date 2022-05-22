@@ -3,14 +3,25 @@
     visibility: visible;
     animation-delay:0.1s;
     animation-name: fadeIn;    
+    
 }
 
 .top__colorback{
-    background-color: #FCE4EC;    
+    background-color: #F3F6E9;    
 }
 
 .bread__hover > ol > li > a:hover,.bread__hover > ol > li > a:focus
 {
     text-decoration-color: navy;
     color: crimson;
+    flex-wrap: wrap;
+}
+.item__start{
+    text-align: end;
+}
+
+@media(max-width: 767px){
+    .item__start{
+        text-align: start;
+    }
 }

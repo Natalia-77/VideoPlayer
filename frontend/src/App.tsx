@@ -8,18 +8,20 @@ import Owl from './components/common/owlCarousel';
 import TopBar from './components/navbar/topbar';
 import ContactBar from './components/navbar/contact';
 
-function App() {
+const App=()=> {
   return (
-    
-    // <Spinner/>
-    
+
+    // <Spinner/>    
     //<Owl/>
     <>
-     <TopBar/>
-    <ContactBar/>
+    <header>
+    <TopBar />
+      <ContactBar />
+    </header>
+      
     </>
-   
-   
+
+
   );
 }
 
