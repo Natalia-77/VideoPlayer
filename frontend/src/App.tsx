@@ -7,6 +7,7 @@ import './App.css';
 import Owl from './components/common/owlCarousel';
 import TopBar from './components/navbar/topbar';
 import ContactBar from './components/navbar/contact';
+import  NavbarMain from './components/navbar/navbarmain';
 
 const App=()=> {
   return (
@@ -14,9 +15,10 @@ const App=()=> {
     // <Spinner/>    
     //<Owl/>
     <>
-    <header>
+    <header >
     <TopBar />
       <ContactBar />
+      <NavbarMain/>
     </header>
       
     </>

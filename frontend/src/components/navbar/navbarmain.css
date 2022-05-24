@@ -1,0 +1,49 @@
+.navbar__style{
+    visibility: visible;
+    animation-delay:0.1s;
+    animation-name: fadeIn;  
+    background-color: rgb(240, 202, 159);  
+    height: 80px;
+   
+    top: -5px;
+    transition: .5s;
+    position: sticky;
+    z-index: 1020;
+    box-shadow: 10px 10px 5px rgb(7, 154, 159),-0.5em 0 .5em rgb(7, 154, 159);
+    
+}
+.color__colapse{
+    background-color: rgb(240, 202, 159)!important;  
+}
+
+.text__style{
+    
+ font-size: 1.5rem;
+ margin-left: 10px;
+}
+
+.navbar-nav > .nav-item >a { 
+
+   margin-right: 20px;  
+   color: rgb(8, 26, 26)!important;
+   
+}
+
+.text__style > li > a:hover  {   
+    
+    color: rgb(59, 5, 35)!important;
+    text-shadow: 2px 1px rgb(11, 126, 130);
+    
+ }
+
+ @media(max-width: 991px){
+     .container-fluid{
+         /* margin-top: 5px;
+         margin-bottom: 5px; */
+         background-color: rgb(240, 202, 159)!important;  
+     }
+     .text__style{
+         font-size: small;
+     }
+     
+ }
