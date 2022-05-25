@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import './App.css';
 //import Spinner from './components/common/loader/loader';
-import Owl from './components/common/owlCarousel';
+import Owl from './components/common/carousel';
 import TopBar from './components/navbar/topbar';
 import ContactBar from './components/navbar/contact';
 import  NavbarMain from './components/navbar/navbarmain';

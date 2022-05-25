@@ -2,7 +2,7 @@
     visibility: visible;
     animation-delay:0.1s;
     animation-name: fadeIn;  
-    background-color: rgb(233, 197, 219 );  
+    background-color: rgb(217, 202, 202);  
     height: 80px;
    
     top: -5px;
@@ -16,7 +16,7 @@
 }
 
 .color__colapse{
-    background-color: rgb(233, 197, 219 )!important;  
+    background-color: rgb(217, 202, 202)!important;  
 }
 
 .text__style{
@@ -25,7 +25,7 @@
  margin-left: 10px;
 }
 
-.navbar-nav > .nav-item >a { 
+.navbar-nav > .nav-item > a { 
 
    margin-right: 20px;  
    color: rgb(8, 26, 26)!important;
@@ -54,7 +54,7 @@
      .container-fluid{
          /* margin-top: 5px;
          margin-bottom: 5px; */
-         background-color: rgb(233, 197, 219 )!important;  
+         background-color: rgb(217, 202, 202)!important;  
      }
      .text__style{
          font-size: small;
