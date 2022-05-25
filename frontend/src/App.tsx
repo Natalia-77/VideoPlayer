@@ -19,6 +19,8 @@ const App=()=> {
     <TopBar />
       <ContactBar />
       <NavbarMain/>
+      <Owl/>
+      
     </header>
       
     </>
