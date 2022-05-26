@@ -4,15 +4,22 @@
     visibility: visible;
     animation-delay:0.1s;
     animation-name: fadeIn;   
+    margin-top: 14px;
+    margin-bottom: 20px;
      
 }
 
 .contact__colorback{
     
     background: white;
-    box-shadow: 10px 10px 5px rgb(7, 154, 159),-0.5em 0 .5em rgb(7, 154, 159);
-    border-radius: 30px;
+    /* box-shadow: 10px 10px 5px rgb(167, 131, 123),-0.5em 0 .5em rgb(167, 131, 123); */
+    border:3px solid rgb(58, 8, 8);
+    border-radius: 10px;   
     
+}
+
+.text__size{
+    font-size: 20px;
 }
 
 .text__fonts{
@@ -33,10 +40,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
-    width: 40px;
+    height: 55px;
+    width: 55px;
     border-style: solid ;
-    border-width: 1px;
+    border-width: 3px;
     border-color: rgb(200, 192, 192);    
 }
 

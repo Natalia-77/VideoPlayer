@@ -2,21 +2,25 @@
     visibility: visible;
     animation-delay:0.1s;
     animation-name: fadeIn;  
-    background-color: rgb(217, 202, 202);  
+    background-color: rgb(186, 168, 164 );  
     height: 80px;
-   
+    margin-top: 8px;
     top: -5px;
     transition: .5s;
     position: sticky;
     z-index: 1020;
     /* box-shadow: 10px 10px 5px rgb(7, 154, 159),-0.5em 0 .5em rgb(7, 154, 159); */
-    border-top: 1px solid blue;
-    border-bottom: 1px solid red;
+    border-top: 2px solid rgb(100, 76, 71 );
+    border-bottom:3px solid rgb(100, 76, 71 );
     
 }
 
+.navbar__color{
+    background-color: rgb(186, 168, 164 );   
+}
+
 .color__colapse{
-    background-color: rgb(217, 202, 202)!important;  
+    background-color: rgb(186, 168, 164 )!important;  
 }
 
 .text__style{

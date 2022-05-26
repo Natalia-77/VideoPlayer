@@ -2,8 +2,8 @@
 .image{
 
   width: 100%;
-  height: 450px; 
-  
+  height: 400px; 
+  object-fit:cover;
 }
 
 .carousel__style{
@@ -11,6 +11,8 @@
     visibility: visible;
     animation-delay:0.1s;
     animation-name: fadeIn;   
+    padding-top: 8px;
+    margin-bottom: 30px;
 
 }
 
@@ -26,8 +28,8 @@
 
 .carousel-inner{
   border:3px solid rgb(58, 8, 8);
-  box-shadow: 10px 10px 5px rgb(227, 139, 216),-0.5em 0 .5em rgb(7, 154, 159);
-    border-radius: 30px;
+  box-shadow: 10px 10px 5px rgb(167, 131, 123),-0.5em 0 .5em rgb(167, 131, 123);
+  border-radius: 10px;
 }
 
 

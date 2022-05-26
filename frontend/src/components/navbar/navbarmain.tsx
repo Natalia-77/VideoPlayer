@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavbarMain: React.FC = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 mx-1 wow fadeIn navbar__style"
+        <nav className="navbar navbar-expand-lg wow fadeIn navbar__style"
             data-wow-delay="0.1s" >
-            <div className="container-fluid" >
+            <div className="container-fluid " >
                 <a className="navbar-brand d-lg-none mb-2 menu__style" href="#">Menu</a>
                 <button className="navbar-toggler icon__color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span >
