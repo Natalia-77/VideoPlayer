@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const ContactBar: React.FC = () => {
 
     return (
-        <div className="container-lg-fluid px-4  wow fadeIn contact__style" data-wow-delay="0.1s">
+        <div className="container-lg-fluid px-4 contact__style">
             <div className="row align-items-center d-lg-flex contact__colorback">
                 <div className="col-lg-4 col-md-12 col-sm-12 text-center text-lg-start">
                <div className="navbar-brand m-2 p-2" >

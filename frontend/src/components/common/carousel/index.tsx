@@ -4,7 +4,7 @@ import './index.css';
 const Carousel = () => {  
 
   return (
-    <div className="container-fluid wow fadeIn carousel__style" data-wow-delay="0.1s" > 
+    <div className="container-fluid carousel__style"> 
 
       <div id="carousel" className="carousel carousel-dark slide" data-bs-ride="carousel">
         <div className="carousel-indicators">

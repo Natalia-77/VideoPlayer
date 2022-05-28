@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const TopBar: React.FC = () => {
 
     return (
-        <div className="container-lg-fluid bg-light px-0 wow fadeIn top__style" data-wow-delay="0.1s">
+        <div className="container-lg-fluid bg-light px-0">
             <div className="row gx-0 align-items-center top__colorback">
                 <div className="col-xl-6 col-md-6 col-sm-12 px-5 text-start bread__hover ">
                     <ol className="breadcrumb mb-0">

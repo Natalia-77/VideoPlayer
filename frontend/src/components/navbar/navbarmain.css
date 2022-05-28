@@ -1,38 +1,30 @@
 .navbar__style{
-    visibility: visible;
-    animation-delay:0.1s;
-    animation-name: fadeIn;  
+
     background-color: rgb(186, 168, 164 );  
     height: 80px;
-    margin-top: 8px;
-    top: -5px;
-    transition: .5s;
-    position: sticky;
-    z-index: 1020;
-    /* box-shadow: 10px 10px 5px rgb(7, 154, 159),-0.5em 0 .5em rgb(7, 154, 159); */
+    margin-top: 8px;    
     border-top: 2px solid rgb(100, 76, 71 );
     border-bottom:3px solid rgb(100, 76, 71 );
     
 }
+.color__colapse > ul{
 
-.navbar__color{
-    background-color: rgb(186, 168, 164 );   
-}
-
-.color__colapse{
-    background-color: rgb(186, 168, 164 )!important;  
+    background-color: rgb(186, 168, 164 )!important;     
+    
 }
 
 .text__style{
     
  font-size: 1.5rem;
- margin-left: 10px;
+ margin-left: 10px; 
 }
+
 
 .navbar-nav > .nav-item > a { 
 
    margin-right: 20px;  
-   color: rgb(8, 26, 26)!important;
+   color: rgb(8, 26, 26)!important; 
+   
    
 }
 
@@ -46,14 +38,11 @@
      color:black!important;
  }
 
- /* .menu__style .navbar-toggler-icon{
-     color:black!important;
- } */
-
  .icon__color > span > i{
     color:black!important;
     font-size: 35px;
  }
+
  @media(max-width: 991px){
      .container-fluid{
          /* margin-top: 5px;
