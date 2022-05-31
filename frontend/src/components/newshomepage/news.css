@@ -1,5 +1,28 @@
-.news__style{
+.news__style {
    background-color: rgb(166, 166, 224);
-   height: 20px;  
-    
+   height: 20px;
+
+}
+.tt{
+   margin: 0 auto;
+}
+
+.colfo{
+   background-color: #F5F2E7;
+   border:3px solid rgb(58, 8, 8);
+    border-radius: 10px;   
+    margin-right: 5px;
+}
+
+
+.card__style >i > h5{
+   font-size: 30px;
+}
+
+.card__style > i > h5::after {
+   content: "experience";
+   display: flex;
+   /* flex-wrap: wrap; */
+   justify-content: center;
+   font-size: 30px;
 }
