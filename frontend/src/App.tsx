@@ -8,7 +8,8 @@ import Owl from './components/common/carousel';
 import TopBar from './components/navbar/topbar';
 import ContactBar from './components/navbar/contact';
 import  NavbarMain from './components/navbar/navbarmain';
-import AboutUs from './components/newshomepage/news';
+
+import ShortInfo from './components/newshomepage/news';
 
 const App=()=> {
   return (
@@ -21,7 +22,7 @@ const App=()=> {
       <ContactBar />
       <NavbarMain/>
       <Owl/>
-      <AboutUs/>
+      <ShortInfo/>
       
     </header>
       

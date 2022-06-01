@@ -3,19 +3,19 @@ import { useSpring, animated } from 'react-spring';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy,faPeopleGroup,faPersonChalkboard,faDiagramProject } from '@fortawesome/free-solid-svg-icons';
 
-const AboutUs: React.FC = () => {
+const ShortInfo: React.FC = () => {
 
-    const styles = useSpring({
-        from: { transform: "translateY(0%)" },
-        to: [
-            { transform: "translateY(0%)" },
-            { transform: "translateY(50%)" },
-        ],
-        config: { mass: 3 },
-        //   loop:true
+    // const styles = useSpring({
+    //     from: { transform: "translateY(200%)" },
+    //     to: [
+    //         { transform: "translateY(0%)" },
+              
+    //     ],
+    //     config: { mass: 3 },
+    //        //loop:true
 
 
-    });
+    // });    
     return (
         // <div className="container py-5">
         //     <div className="container">
@@ -31,8 +31,8 @@ const AboutUs: React.FC = () => {
 
 
         <div className="container py-2">
-            <div className="row">
-                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3">
+            <div className="row w-100" >           
+                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3" id="experienceCard" >
                     <div className="card__style">
                         <div className="mt-4 title__experience">
                             <i>
@@ -43,7 +43,8 @@ const AboutUs: React.FC = () => {
                         <h1 className="mt-1">15</h1>
                     </div>
                 </div>
-                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3">
+               
+                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3" id="teamCard" >
                     <div className="card__style">
                         <div className="mt-4 title__team">
                             <i>
@@ -54,7 +55,8 @@ const AboutUs: React.FC = () => {
                         <h1 className="mt-1">1100</h1>
                     </div>
                 </div>
-                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3">
+              
+                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3" id="studentCard">
                     <div className="card__style">
                         <div className="mt-4 title__student">
                             <i>
@@ -65,7 +67,8 @@ const AboutUs: React.FC = () => {
                         <h1 className="mt-1">6500</h1>
                     </div>
                 </div>
-                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3">
+             
+                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3" id="projectCard">
                     <div className="card__style">
                         <div className="mt-4 title__project">
                             <i>
@@ -73,13 +76,12 @@ const AboutUs: React.FC = () => {
                                 <h5 className='m-3'>Done</h5>
                             </i>
                         </div>
-                        <h1 className="mt-1">40</h1>
+                        <h1 className="mt-1">60</h1>
                     </div>
-                </div>
+                </div>               
             </div>
-
         </div>
 
     );
 };
-export default AboutUs;
+export default ShortInfo;
