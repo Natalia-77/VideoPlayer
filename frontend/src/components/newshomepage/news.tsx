@@ -1,7 +1,7 @@
 import './news.css';
 import { useSpring, animated } from 'react-spring';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrophy } from '@fortawesome/free-solid-svg-icons';
+import { faTrophy,faPeopleGroup,faPersonChalkboard,faDiagramProject } from '@fortawesome/free-solid-svg-icons';
 
 const AboutUs: React.FC = () => {
 
@@ -28,68 +28,57 @@ const AboutUs: React.FC = () => {
         //         </div>
         //     </div>
         // </div>
-        
 
-            <div className="container">
-                <div className="row row-cols-lg-5 g-lg-2  " >
-                    <div className="col p-2 colfo ">
-                        <div className="text-center card__style">
-                            <i className="mb-4">
+
+        <div className="container py-2">
+            <div className="row">
+                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3">
+                    <div className="card__style">
+                        <div className="mt-4 title__experience">
+                            <i>
                                 <FontAwesomeIcon icon={faTrophy} size="3x" color='#092248' />
                                 <h5 className='m-3'>Years</h5>
                             </i>
-                            <h1 className="mt-1">15</h1>
                         </div>
+                        <h1 className="mt-1">15</h1>
                     </div>
-                    <div className="col p-2 colfo">
-                        <div className="text-center  card__style">
-                            <i className="mb-4">
-                                <FontAwesomeIcon icon={faTrophy} size="3x" color='#092248' />
-                                <h5 className='m-3'>Years</h5>
+                </div>
+                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3">
+                    <div className="card__style">
+                        <div className="mt-4 title__team">
+                            <i>
+                                <FontAwesomeIcon icon={faPersonChalkboard } size="3x" color='#092248' />
+                                <h5 className='m-3'>Team</h5>
                             </i>
-                            <h1 className="mt-1">15</h1>
                         </div>
+                        <h1 className="mt-1">1100</h1>
                     </div>
-                    <div className="col p-2 colfo">
-                        <div className="text-center card__style">
-                            <i className="mb-4">
-                                <FontAwesomeIcon icon={faTrophy} size="3x" color='#092248' />
-                                <h5 className='m-3'>Years</h5>
+                </div>
+                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3">
+                    <div className="card__style">
+                        <div className="mt-4 title__student">
+                            <i>
+                                <FontAwesomeIcon icon={faPeopleGroup} size="3x" color='#092248' />
+                                <h5 className='m-3'>Satisfied</h5>
                             </i>
-                            <h1 className="mt-1">15</h1>
                         </div>
+                        <h1 className="mt-1">6500</h1>
                     </div>
-                    <div className="col p-2 colfo">
-                        <div className="text-center  card__style">
-                            <i className="mb-4">
-                                <FontAwesomeIcon icon={faTrophy} size="3x" color='#092248' />
-                                <h5 className='m-3'>Years</h5>
+                </div>
+                <div className="text-center col-md-6 col-sm-12 py-md-3 py-sm-2 py-2 col-lg-3">
+                    <div className="card__style">
+                        <div className="mt-4 title__project">
+                            <i>
+                                <FontAwesomeIcon icon={faDiagramProject} size="3x" color='#092248' />
+                                <h5 className='m-3'>Done</h5>
                             </i>
-                            <h1 className="mt-1">15</h1>
                         </div>
+                        <h1 className="mt-1">40</h1>
                     </div>
-                    
                 </div>
             </div>
-            
-        //     <div className="container">
-        //     <div className="row  row-cols-lg-4  g-lg-3">
-        //       <div className="col">
-        //         <div className="p-3 border bg-light">Row column</div>
-        //       </div>
-        //       <div className="col">
-        //         <div className="p-3 border bg-light">Row column</div>
-        //       </div>
-        //       <div className="col">
-        //         <div className="p-3 border bg-light">Row column</div>
-        //       </div>
-        //       <div className="col">
-        //         <div className="p-3 border bg-light">Row column</div>
-        //       </div>
-              
-        //       </div>
-           
-        //   </div>
+
+        </div>
 
     );
 };
