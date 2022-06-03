@@ -26,6 +26,7 @@
     "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-owl-carousel": "^2.3.3",
     "react-player": "^2.10.0",
     "react-redux": "^7.2.6",
@@ -61,5 +62,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.5"
   }
 }
