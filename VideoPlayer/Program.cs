@@ -3,6 +3,7 @@ using Domain.Identity;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
@@ -82,15 +83,20 @@ builder.Services.AddSwaggerGen((SwaggerGenOptions o) =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
 
-    app.UseSwagger();
+//if (app.Environment.IsDevelopment())
+//{
+
+app.UseSwagger();
     app.UseSwaggerUI((SwaggerUIOptions c) =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Player");
     });
-}
+//}
 
 app.UseStaticFiles();
 
@@ -109,7 +115,7 @@ app.UseStaticFiles(new StaticFileOptions
     RequestPath = "/images"
 });
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseRouting();
 
 // Authentication & Authorization
