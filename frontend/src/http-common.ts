@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const urlBackend = 'http://localhost:5000/';
+export const urlBackend = 'https://startss.tk/';
 export default axios.create({
   baseURL: `${urlBackend}`,
   headers: {
