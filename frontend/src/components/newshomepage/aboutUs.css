@@ -33,15 +33,19 @@
 
 }
 
-.color__text {
+.color__text>h1 {
 
     color: black;
+    font-family: 'Tai Heritage Pro', serif;
+
 }
 
 .color__text>p {
 
     text-align: center;
-    color: brown;
+    color: rgb(82, 19, 19);
+
+    font-family: 'Tai Heritage Pro', serif;
 }
 
 .color__text .start__text {
@@ -50,43 +54,52 @@
 
 .color__text .start__values {
     margin-left: 75px;
-   
+
 }
 
 @media(max-width: 990px) {
     .visible {
         display: none;
     }
+
     .color__text .start__text {
         margin-left: 0px;
     }
-    
+
     .color__text .start__values {
         margin-left: 0px;
     }
 }
 
-.border__colored{
+.border__colored {
 
     border-bottom: 2px solid rgb(41, 23, 23);
     border-left: 2px solid rgb(41, 23, 23);
-    box-shadow: 10px 10px 5px rgb(167, 131, 123),-0.5em 0 .5em rgb(167, 131, 123);
-    border-radius: 10px;         
-   
-}
-.course__style{         
+    box-shadow: 10px 10px 5px rgb(167, 131, 123), -0.5em 0 .5em rgb(167, 131, 123);
+    border-radius: 10px;
 
-    background-color:#DCF1F1;  
-    box-shadow: 10px 10px 5px rgb(122, 161, 184),-0.5em 0 .5em rgb(44, 49, 93);
-    border-radius: 6px; 
-    overflow: hidden;  
 }
 
-.card > h3::after {
-    margin-top: 15px;    
-    content: "Let our course finder do the hard work and find the right course for you.Pick a subject below or just click start.Take a look at our latest West London College course guides. Each guide has all the information you need about studying with us, linked to career pathways, with interactive links and videos.";
+.course__style {
+
+    background-color: #2d4343;
+    box-shadow: 10px 10px 5px rgb(122, 161, 184), -0.5em 0 .5em rgb(44, 49, 93);
+    border-radius: 6px;
+    overflow: hidden;
+    width: auto;
+
+}
+
+.card>h3 {
+    background-color: rgb(191, 224, 224);
+    margin: 0;
+}
+
+.card>h3::after {
+    /* margin-top: 15px;     */
+    content: "Let our course finder do the hard work and find the right course for you.Pick a subject below or just click start.";
     display: flex;
-    justify-content: center;
+    justify-content: start;
     font-size: 20px;
-    
+
 }
