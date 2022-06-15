@@ -35,15 +35,15 @@ const AboutUs: React.FC = () => {
                         </p>
                     </div>
                     <div className="row m-5">
-                        {/* <h1 >dhdhdhdhdhhh</h1> */}
+                        {/* <h1 >oooo</h1> */}
                     </div>
                 </div>
                 <div className="row mt-5">
-                    <div className="col-lg-3 text-center">
+                    <div className="col-lg-3 text-center tt">
                         <div className="course__style">
-                            <div className="card">
-                                <h3>
-                                    COURSE FINDER
+                            <div className="card__courseFinder" id="courseFinder">
+                                <h3 className='text__color'>
+                                    QUICK COURSE FINDER
                                 </h3>
                             </div>
                         </div>
@@ -52,8 +52,8 @@ const AboutUs: React.FC = () => {
                     </div>
                     <div className="col-lg-3 text-center">
                     <div className="course__style">
-                            <div className="card">
-                                <h3>
+                            <div className="card__paying" id="paying">
+                                <h3 className='text__color'>
                                 PAYING YOUR FEES
                                 </h3>
                             </div>
@@ -61,8 +61,8 @@ const AboutUs: React.FC = () => {
                     </div>
                     <div className="col-lg-3 text-center">
                     <div className="course__style">
-                            <div className="card">
-                                <h3>
+                            <div className="card__studentService" id="studentService">
+                                <h3 className='text__color'>
                                 STUDENT SERVICES
                                 </h3>
                             </div>
@@ -70,9 +70,9 @@ const AboutUs: React.FC = () => {
                     </div>
                     <div className="col-lg-3 text-center">
                     <div className="course__style">
-                            <div className="card">
-                                <h3>
-                                JOBS
+                            <div className="card__jobs" id="jobs">
+                                <h3 className='text__color'>
+                                JOBS FOR STUDENTS
                                 </h3>
                             </div>
                         </div>

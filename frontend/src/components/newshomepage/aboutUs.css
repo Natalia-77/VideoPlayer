@@ -32,7 +32,6 @@
     transform: rotate(20deg);
 
 }
-
 .color__text>h1 {
 
     color: black;
@@ -44,7 +43,6 @@
 
     text-align: center;
     color: rgb(82, 19, 19);
-
     font-family: 'Tai Heritage Pro', serif;
 }
 
@@ -82,24 +80,67 @@
 
 .course__style {
 
-    background-color: #2d4343;
+    /* background-color: #2d4343; */
     box-shadow: 10px 10px 5px rgb(122, 161, 184), -0.5em 0 .5em rgb(44, 49, 93);
     border-radius: 6px;
-    overflow: hidden;
-    width: auto;
-
-}
-
-.card>h3 {
-    background-color: rgb(191, 224, 224);
-    margin: 0;
-}
-
-.card>h3::after {
-    /* margin-top: 15px;     */
-    content: "Let our course finder do the hard work and find the right course for you.Pick a subject below or just click start.";
+    overflow: hidden;    
+    flex-flow: row wrap;
     display: flex;
-    justify-content: start;
-    font-size: 20px;
-
+    background-color: rgb(237, 236, 181);
+    height: 500px;
+    
 }
+
+#courseFinder .card__courseFinder > h3,
+#paying .card__paying > h3,
+#studentService .card__studentService > h3,
+#jobs .card__job > h3
+{    
+    color: chartreuse;
+    flex-flow: row wrap;
+    height: 100%;
+  
+}
+.card__courseFinder > h3::after {
+    margin-top: 15px;    
+    content: "Let our course finder do the hard work and find the right course for you.Pick a subject below or just click start.The team will provide support on application, assessment and interview processes, CV writing and job interviews, and general information you might need.";
+    display: flex; 
+    font-size: 20px;
+    color: black; 
+    flex-flow: row wrap;
+}
+
+.card__paying > h3::after {
+    margin-top: 15px;    
+    content: "For HND and Graduate courses, ‘Home’ students who are resident in the UK can apply for a student loan to cover all part of their tuition fees. Student Loans are provided by The Student Loan Company (SLC) for assistance with tuition fees and/or maintenance and loans do not have to be repaid until you have finished your course and are earning over £25,000 per year.";
+    display: flex; 
+    font-size: 20px;
+    color: black;
+    flex-flow: row wrap;
+}
+
+.card__studentService > h3::after {
+    margin-top: 15px;    
+    content: "You will receive lots of support whilst studying with us. Once you enrol, you will have access to a range of services all designed to give you a head start.We are committed to ensuring you get the best possible support for your studies. We understand that finances can be one of the biggest obstacles to overcome in order to reach your potential";
+    display: flex; 
+    font-size: 20px;
+    color: black; 
+    flex-flow: row wrap;
+}
+
+.card__jobs > h3::after {
+    margin-top: 15px;    
+    content: "West London College is one of the largest and most diverse colleges in the UK. We offer an exciting, innovative and stimulating work environment with a wide variety of employment opportunities. We welcome applicants who  share our values of Ambition, Accountability, Inclusion and Innovation.";
+    display: flex; 
+    font-size: 20px;
+    color: black; 
+    flex-flow: row wrap;
+}
+
+.text__color{
+    color: rgb(56, 17, 93);
+    font-family: 'Tai Heritage Pro', serif;
+    
+}
+
+ 
