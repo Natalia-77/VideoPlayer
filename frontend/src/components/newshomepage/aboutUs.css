@@ -36,10 +36,11 @@
 
     color: black;
     font-family: 'Tai Heritage Pro', serif;
+    margin: 10px;
 
 }
 
-.color__text>p {
+.color__text > p {
 
     text-align: center;
     color: rgb(82, 19, 19);
@@ -48,10 +49,12 @@
 
 .color__text .start__text {
     margin-left: 70px;
+    margin-right: 15px;
 }
 
 .color__text .start__values {
     margin-left: 75px;
+    margin-right: 15px;
 
 }
 
@@ -62,6 +65,7 @@
 
     .color__text .start__text {
         margin-left: 0px;
+       
     }
 
     .color__text .start__values {
@@ -83,26 +87,30 @@
     /* background-color: #2d4343; */
     box-shadow: 10px 10px 5px rgb(122, 161, 184), -0.5em 0 .5em rgb(44, 49, 93);
     border-radius: 6px;
-    overflow: hidden;    
+    overflow: visible;    
     flex-flow: row wrap;
     display: flex;
     background-color: rgb(237, 236, 181);
-    height: 500px;
+    height:100%;  /*--!!!--*/
+    padding: 25px;
+    position: relative;
     
 }
 
 #courseFinder .card__courseFinder > h3,
 #paying .card__paying > h3,
 #studentService .card__studentService > h3,
-#jobs .card__job > h3
+#jobs .card__jobs > h3
 {    
-    color: chartreuse;
-    flex-flow: row wrap;
-    height: 100%;
+    flex-flow: row wrap;   
+    /* height: 100%; */
+
   
 }
+
 .card__courseFinder > h3::after {
-    margin-top: 15px;    
+
+    margin-top: 15px;      
     content: "Let our course finder do the hard work and find the right course for you.Pick a subject below or just click start.The team will provide support on application, assessment and interview processes, CV writing and job interviews, and general information you might need.";
     display: flex; 
     font-size: 20px;
@@ -111,7 +119,8 @@
 }
 
 .card__paying > h3::after {
-    margin-top: 15px;    
+
+    margin-top: 15px;     
     content: "For HND and Graduate courses, ‘Home’ students who are resident in the UK can apply for a student loan to cover all part of their tuition fees. Student Loans are provided by The Student Loan Company (SLC) for assistance with tuition fees and/or maintenance and loans do not have to be repaid until you have finished your course and are earning over £25,000 per year.";
     display: flex; 
     font-size: 20px;
@@ -120,7 +129,8 @@
 }
 
 .card__studentService > h3::after {
-    margin-top: 15px;    
+
+    margin-top: 15px;        
     content: "You will receive lots of support whilst studying with us. Once you enrol, you will have access to a range of services all designed to give you a head start.We are committed to ensuring you get the best possible support for your studies. We understand that finances can be one of the biggest obstacles to overcome in order to reach your potential";
     display: flex; 
     font-size: 20px;
@@ -129,7 +139,8 @@
 }
 
 .card__jobs > h3::after {
-    margin-top: 15px;    
+
+    margin-top: 15px;     
     content: "West London College is one of the largest and most diverse colleges in the UK. We offer an exciting, innovative and stimulating work environment with a wide variety of employment opportunities. We welcome applicants who  share our values of Ambition, Accountability, Inclusion and Innovation.";
     display: flex; 
     font-size: 20px;
@@ -142,5 +153,42 @@
     font-family: 'Tai Heritage Pro', serif;
     
 }
+.card__courseFinder,
+.card__paying,
+.card__jobs,
+.card__studentService
+{
+    position: relative;
+    
+}
 
+.course__style .pay >a,
+.course__style .finder > a,
+.course__style .student > a,
+.course__style .jobs > a
+{
+  position: absolute;
+  bottom: 0; 
+  
+  background-color: rgb(96, 38, 231);
+  color: rgb(250, 255, 255); 
+ 
+}
+
+.course__style .finder > a:hover,
+.course__style .pay > a:hover,
+.course__style .student > a:hover,
+.course__style .jobs > a:hover
+{
+   background-color: rgba(24, 130, 229, 0.874);
+   color:azure;
+}
+.pay  > a,
+.finder > a,
+.student > a,
+.jobs > a{
+
+    margin-bottom: 10px;
+    align-content: center;
+}
  
