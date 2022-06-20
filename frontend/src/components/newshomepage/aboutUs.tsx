@@ -1,6 +1,5 @@
 import './aboutUs.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBrain} from '@fortawesome/free-solid-svg-icons';
+
 const AboutUs: React.FC = () => {
 
     return (
@@ -40,19 +39,19 @@ const AboutUs: React.FC = () => {
                     </div>
                 </div>
                 <div className="row mt-5">
-                    <div className="col-lg-3 col-md-6 text-center">
-                        <div className="course__style">
+                    <div className="col-lg-3 col-md-6 py-md-3 py-sm-3 text-center">
+                        <div className="course__style px-0">
                             <div className="card__courseFinder" id="courseFinder">
                                 <h3 className='text__color'>
                                     QUICK COURSE FINDER
                                 </h3>
                             </div>
-                            <div className="mt-5 finder">
-                                <a href="/" className="btn rounded-pill py-3 px-5">Read more</a>
+                            <div className="my-5  finder">
+                                <a href="/" className="btn rounded-pill w-100">Read more</a>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-md-6 text-center">
+                    <div className="col-lg-3 col-md-6 py-md-3 py-sm-3 text-center">
                         <div className="course__style">
                             <div className="card__paying" id="paying">
                                 <h3 className='text__color'>
@@ -60,11 +59,11 @@ const AboutUs: React.FC = () => {
                                 </h3>
                             </div>
                             <div className="mt-5 pay">
-                                <a href="/" className="btn rounded-pill py-3 px-5">Read more</a>
+                                <a href="/" className="btn rounded-pill w-100">Read more</a>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-md-6 text-center">
+                    <div className="col-lg-3 col-md-6 py-sm-3 text-center">
                         <div className="course__style">
                             <div className="card__studentService" id="studentService">
                                 <h3 className='text__color'>
@@ -72,11 +71,11 @@ const AboutUs: React.FC = () => {
                                 </h3>
                             </div>
                             <div className="mt-5 student">
-                                <a href="/" className="btn rounded-pill py-3 px-5">Read more</a>
+                                <a href="/" className="btn rounded-pill w-100">Read more</a>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-md-6 text-center">
+                    <div className="col-lg-3 col-md-6 py-sm-3 text-center">
                         <div className="course__style">
                             <div className="card__jobs" id="jobs">
                                 <h3 className='text__color'>
@@ -84,16 +83,13 @@ const AboutUs: React.FC = () => {
                                 </h3>
                             </div>
                             <div className="mt-5 jobs">
-                                <a href="/" className="btn rounded-pill py-3 px-5">Read more</a>
+                                <a href="/" className="btn rounded-pill w-100">Read more</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     )
 };
 export default AboutUs;

@@ -83,16 +83,14 @@
 }
 
 .course__style {
-
-    /* background-color: #2d4343; */
+    
     box-shadow: 10px 10px 5px rgb(122, 161, 184), -0.5em 0 .5em rgb(44, 49, 93);
     border-radius: 6px;
     overflow: visible;    
     flex-flow: row wrap;
     display: flex;
     background-color: rgb(237, 236, 181);
-    height:100%;  /*--!!!--*/
-    padding: 25px;
+    height:100%;  /*--!!!--*/ 
     position: relative;
     
 }
@@ -168,7 +166,10 @@
 .course__style .jobs > a
 {
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
+ 
+  display: table;
+  margin: 3 auto;
   
   background-color: rgb(96, 38, 231);
   color: rgb(250, 255, 255); 
@@ -183,12 +184,13 @@
    background-color: rgba(24, 130, 229, 0.874);
    color:azure;
 }
+
 .pay  > a,
 .finder > a,
 .student > a,
 .jobs > a{
 
     margin-bottom: 10px;
-    align-content: center;
+   
 }
  

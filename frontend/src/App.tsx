@@ -6,6 +6,7 @@ import './App.css';
 import DefaultLayout from "./components/containers/DefaultLayout";
 import HomePage from './components/home';
 import Weather from './components/newshomepage/weather';
+import Register from './components/account/register';
 
 
 const App: React.FC = () => {
@@ -15,10 +16,10 @@ const App: React.FC = () => {
         <Route path="/" element={<DefaultLayout />}>          
           <Route index element={< HomePage />} />
           <Route
-            path="/weather"
+            path="/register"
             element={
               <Suspense fallback={null}>
-                <Weather />
+                <Register />
               </Suspense>
             }
           />
