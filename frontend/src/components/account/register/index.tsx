@@ -3,6 +3,7 @@ import { Formik, Form, useFormik, FormikHelpers, FormikProvider } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';
 import TextInput from '../../common/textInput/TextInput';
 import { IRegister } from './types';
+import {RegisterValidationSchema} from './validation';
 
 const Register: FC = () => {
 
@@ -23,8 +24,9 @@ const Register: FC = () => {
     const formik = useFormik({
 
         initialValues: initialValues,
-        onSubmit: onHandlerSubmit
-
+        onSubmit: onHandlerSubmit,
+        validationSchema:RegisterValidationSchema
+        
     });
 
     const { errors, touched, handleChange, values, handleSubmit, setFieldValue } = formik;
@@ -33,7 +35,7 @@ const Register: FC = () => {
         <div className="row">
             <div className="offset-md-3 col-md-6">
                 <h1 className="text-center text-primary">Registration</h1>
-                
+
                 <FormikProvider value={formik}>
 
                     <Form onSubmit={handleSubmit}>
