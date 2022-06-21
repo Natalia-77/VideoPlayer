@@ -1,10 +1,10 @@
 import React, { FC, useRef, useEffect } from 'react';
-import { Formik, Form, useFormik, FormikHelpers } from 'formik';
+import { Formik, Form, useFormik, FormikHelpers, FormikProvider } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';
 import TextInput from '../../common/textInput/TextInput';
 import { IRegister } from './types';
 
-const Register:FC=()=>{
+const Register: FC = () => {
 
     const initialValues: IRegister = {
 
@@ -21,20 +21,23 @@ const Register:FC=()=>{
     };
 
     const formik = useFormik({
-        
-        initialValues: initialValues,   
+
+        initialValues: initialValues,
         onSubmit: onHandlerSubmit
 
     });
 
-    const { errors, touched, handleChange, handleSubmit, setFieldValue, values } = formik;
+    const { errors, touched, handleChange, values, handleSubmit, setFieldValue } = formik;
 
-    return(
+    return (
         <div className="row">
             <div className="offset-md-3 col-md-6">
-                <h1  className="text-center text-primary">Registration</h1>                              
-               
-                    <form onSubmit={(e) => formik.handleSubmit(e)}>
+                <h1 className="text-center text-primary">Registration</h1>
+                
+                <FormikProvider value={formik}>
+
+                    <Form onSubmit={handleSubmit}>
+
                         <TextInput
                             label="Email"
                             field='Email'
@@ -42,7 +45,7 @@ const Register:FC=()=>{
                             touched={touched.email}
                             error={errors.email}
                             value={values.email}
-                            onChange={handleChange}
+                            onChange={(e) => setFieldValue('email', e.target.value)}
                         />
 
                         <TextInput
@@ -52,34 +55,36 @@ const Register:FC=()=>{
                             touched={touched.name}
                             error={errors.name}
                             value={values.name}
-                            onChange={handleChange}
-                        />                     
-                       
+                            onChange={(e) => setFieldValue('name', e.target.value)}
+                        />
+
 
                         <TextInput
-
                             label="Password"
                             field='Password'
                             type="password"
                             touched={touched.password}
                             error={errors.password}
                             value={values.password}
-                            onChange={handleChange}
+                            onChange={(e) => setFieldValue('password', e.target.value)}
                         />
 
                         <TextInput
-
                             label="Confirm password"
                             field='Confirm'
                             type="password"
                             touched={touched.confirmPassword}
                             error={errors.confirmPassword}
                             value={values.confirmPassword}
-                            onChange={handleChange}
+                            onChange={(e) => setFieldValue('confirmPassword', e.target.value)}
                         />
-                        <button type="submit" className="btn btn-primary">Реєстрація</button>                                        
-                    </form>                              
-            </div>                  
+
+                        <button type="submit"
+                            className="btn btn-primary"
+                        >Registration</button>
+                    </Form>
+                </FormikProvider>
+            </div>
         </div>
     )
 

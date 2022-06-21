@@ -7,7 +7,7 @@ interface TextInputProps  {
     field: string,
     touched?: boolean,
     error?: string | null,
-    type?: "text"|"email"|"password",
+    type?: "text"|"email"|"password"|"string",
     value:string,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
