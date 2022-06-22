@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using VideoPlayer.Constants;
 using VideoPlayer.Models;
 using VideoPlayer.Services;
+using VideoPlayer.Services.Abstractions;
 
 namespace VideoPlayer.Controllers
 {
@@ -16,16 +17,19 @@ namespace VideoPlayer.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<AppRole> _roleManager;
         private readonly IJwtConfig _tokenService;
+        private readonly IEmailSender _emailSender;
 
         public AccountController(UserManager<AppUser> userManager,
                                 SignInManager<AppUser> signInManager,
                                 RoleManager<AppRole> roleManager,
-                                IJwtConfig tokenService)
+                                IJwtConfig tokenService,
+                                IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _tokenService = tokenService;
+            _emailSender = emailSender;
         }
 
         [HttpPost]
@@ -85,6 +89,28 @@ namespace VideoPlayer.Controllers
             {
                 token = _tokenService.CreateToken(user)
             });
+        }
+
+        [HttpPost]
+        [Route("forgotpassword")]
+
+        public async Task<IActionResult> ForgotPassword([FromForm] ForgotPasswordModel passwordModel)
+        {
+            //var user = await _userManager.FindByEmailAsync(passwordModel.Email);
+            //if (user == null)
+            //{
+            //    return BadRequest("There is no user such email");
+
+            //}
+            //створює маркер скидання пароля для вказаного користувача.
+            //User-користувач,для якого створюється маркер для скидання пароля. 
+            // var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var message = new SendMessageEmailModel(new string[] { passwordModel.Email }, "Your reset password",
+               "It's ok!");
+            await _emailSender.SendEmail(message);
+            return Ok();
+
         }
 
     }

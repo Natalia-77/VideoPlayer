@@ -16,6 +16,7 @@ using VideoPlayer.Helper;
 using VideoPlayer.Mapper;
 using VideoPlayer.Models;
 using VideoPlayer.Services;
+using VideoPlayer.Services.Abstractions;
 using VideoPlayer.Validation;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,8 +27,10 @@ builder.Services.AddDbContext<AppDbContext>((DbContextOptionsBuilder options) =>
 
                options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
-//how use interfaces
+//tokens
 builder.Services.AddScoped<IJwtConfig, JwtConfig>();
+//emailsender
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 // For Identity
 builder.Services.AddIdentity<AppUser, AppRole>(option =>
@@ -40,6 +43,15 @@ builder.Services.AddIdentity<AppUser, AppRole>(option =>
 })
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
+
+//emailsender config from section
+var emailConfig = configuration
+        .GetSection("EmailConfiguration")
+        .Get<EmailConfiguration>();
+
+builder.Services.AddSingleton(emailConfig);
+
+builder.Services.AddControllers();
 
 //Configuration from AppSettings
 var appSettingSection = configuration.GetSection("AppSetting");
