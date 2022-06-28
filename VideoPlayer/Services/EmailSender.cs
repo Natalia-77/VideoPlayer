@@ -38,7 +38,7 @@ namespace VideoPlayer.Services
             using var client = new SmtpClient();
             try
             {
-                await client.ConnectAsync(_emailConfig.SmtpServer, _emailConfig.Port,true);               
+                await client.ConnectAsync(_emailConfig.SmtpServer, _emailConfig.Port, SecureSocketOptions.Auto);               
                 await client.AuthenticateAsync(_emailConfig.UserName, _emailConfig.Password);
                 await client.SendAsync(mailMessage);
 
