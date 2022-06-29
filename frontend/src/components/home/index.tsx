@@ -4,6 +4,7 @@ import NavbarMain from '../navbar/navbarmain';
 import ShortInfo from '../newshomepage/news';
 import Carousel from '../common/carousel';
 import AboutUs from "../newshomepage/aboutUs";
+import  Footer  from "../../pages/footer/footer";
 
 const HomePage = () => {
     return (
@@ -17,6 +18,7 @@ const HomePage = () => {
                 <Carousel />
                 <ShortInfo />
                 <AboutUs/>
+                <Footer/>
 
             </main>
 

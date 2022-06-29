@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy,faPeopleGroup,faPersonChalkboard,faDiagramProject } from '@fortawesome/free-solid-svg-icons';
 
-const ShortInfo: React.FC = () => {
+const ShortInfo = () => {
 
     // const styles = useSpring({
     //     from: { transform: "translateY(200%)" },

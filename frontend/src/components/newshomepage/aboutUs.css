@@ -166,11 +166,9 @@
 .course__style .jobs > a
 {
   position: absolute;
-  bottom: 0;
- 
+  bottom: 0; 
   display: table;
-  margin: 3 auto;
-  
+  margin: 3 auto;  
   background-color: rgb(96, 38, 231);
   color: rgb(250, 255, 255); 
  

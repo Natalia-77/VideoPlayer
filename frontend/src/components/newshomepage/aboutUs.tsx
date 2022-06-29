@@ -1,6 +1,6 @@
 import './aboutUs.css';
 
-const AboutUs: React.FC = () => {
+const AboutUs = () => {
 
     return (
 

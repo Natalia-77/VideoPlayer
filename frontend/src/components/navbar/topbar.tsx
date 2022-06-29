@@ -2,7 +2,7 @@ import './topbar.css';
 import { faFacebook,faTelegram,faYoutube,faViber } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const TopBar: React.FC = () => {
+const TopBar = () => {
 
     return (
         <div className="container-lg-fluid bg-light px-0">

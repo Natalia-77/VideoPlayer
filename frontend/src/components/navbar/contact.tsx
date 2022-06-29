@@ -2,7 +2,7 @@ import './contact.css';
 import { faAngellist,faSketch,faBuffer } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const ContactBar: React.FC = () => {
+const ContactBar = () => {
 
     return (
         <div className="container-lg-fluid px-4 contact__style">

@@ -3,7 +3,7 @@ import './navbarmain.css';
 import { faBuromobelexperte } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const NavbarMain: React.FC = () => {
+const NavbarMain = () => {
     return (
         <nav className="navbar sticky-top navbar-expand-lg navbar__style">
             <div className="container-fluid" >
