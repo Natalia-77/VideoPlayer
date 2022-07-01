@@ -8,7 +8,7 @@ const Footer = () => {
         // <div className="footer__item">
         <div className="footer__body">
             <div className="waves">
-                <div className="wave" id="wave1" style={{background:"/images/wave.png"}}>
+                <div className="wave" id="wave1" >
 {/* <img  alt="man" src="/images/wave.png"/> */}
 
                 </div>
