@@ -6,14 +6,14 @@
     background-color: aqua;
 } */
 
-.footer__body{
+.footer__body {
 
     /* display: flex; */
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
-    background-color: rgb(90, 40, 206);
+    background-color: rgb(53, 31, 110);
     min-height: 100px;
     padding: 0px 0px;
     flex-direction: column;
@@ -23,10 +23,12 @@
 
 }
 
-.footer__body .social__items,
-.footer__body .footer__menu{
 
-    position: relative;
+.footer__body .social__items,
+.footer__body .footer__menu
+{
+
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,12 +36,26 @@
     flex-wrap: wrap;
 }
 
+.wave{
+    position: absolute;
+    top:-100px;
+    left: 0;
+    width: 100%;
+    height: 100px;    
+    
+    background-size: 1000px 100px;   
+    
+    
+}
+
+
+  
 .footer__body .social__items >li
 {
 
     list-style: none;
     font-size: 1rem;
-    color: rgb(143, 185, 222);
+    color: rgb(167, 181, 193);
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
@@ -47,14 +63,14 @@
 
 .footer__body .social__items >li:hover{
     
-   transform: translateY(-10px);
+   transform: translateY(-5px);
 }
 
 .footer__body .footer__menu >li{
 
     list-style: none;
     font-size: 1rem;
-    color: rgb(143, 185, 222);
+    color: rgb(143, 132, 159);
     margin: 0 10px;
     display: inline-block;
     text-decoration: none;
@@ -63,10 +79,11 @@
 
 .footer__body .footer__menu >li:hover{
     
-    opacity: 3;
+    color: aliceblue;
+    
 }
 
-.footer__body >p{
+.footer__body > p{
 
     color: beige;
     text-align: center;
@@ -76,26 +93,55 @@
 
 }
 
-.footer__body .waves {
-    position: absolute;
-    top:-100px;
-    left: 0;
-    width: 100%;
-    height: 100px;    
+
+#wave1 
+  {
     background: url(/public/images/wave_purple.png);
-    background-size: 1000px 100px;
     z-index: 1000;
     opacity: 0.75;    
     animation: animateWave 6s infinite linear ;
     
 }
 
- @keyframes animateWave{
-     0%{
-         background-position-x:1000px ;
-     }
-     100%{
-         background-position-x: 0px;
-     }
- }
+#wave2{
+   
+    z-index: 999;
+    background: url(/public/images/wave_purple.png);
+    bottom: 10px;    
+  
+   
+    opacity: 0.5;    
+    animation: animateWave2 6s infinite linear ;
+}
+
+#wave3{
+   
+    z-index: 998;
+    background: url(/public/images/wave_purple.png);
+    bottom: 20px;    
+  
+   
+    opacity: 0.5;    
+    animation: animateWave 6s infinite linear ;
+}
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100%{
+background-position-x: 0px;
+    }
+    
+}
+
+@keyframes animateWave2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100%{
+background-position-x: 1000px;
+    }
+}
+
+ 
  
