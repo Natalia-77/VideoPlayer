@@ -38,7 +38,7 @@ const AboutUs = () => {
                         {/* <h1 >oooo</h1> */}
                     </div>
                 </div>
-                <div className="row mt-5">
+                <div className="row mb-5">
                     <div className="col-lg-3 col-md-6 py-md-3 py-sm-3 text-center">
                         <div className="course__style px-0">
                             <div className="card__courseFinder" id="courseFinder">
