@@ -4,6 +4,12 @@ export enum RegisterActionTypes {
     REGISTER_SUCCESS = "REGISTER_SUCCESS",
 }
 
+export interface RegisterState {
+	data: string,
+	isRegisterd:boolean,
+  loader:boolean
+}
+
 export interface IRegister {
     email: string,
     name: string,     

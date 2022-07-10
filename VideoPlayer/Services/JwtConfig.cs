@@ -29,7 +29,8 @@ namespace VideoPlayer.Services
             var roleClaims = new List<Claim>()
             {
                  new Claim("id",user.Id.ToString()),
-                 new Claim("name",user.UserName)
+                 new Claim("name",user.UserName),
+                 new Claim("email",user.Email)
             };
             foreach (var role in roles)
             {
