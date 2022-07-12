@@ -6,7 +6,7 @@ import {
        RegisterActionTypes } from './types';
        import http from '../../../http-common';
 
-
+import {setUserInLocalStorage} from '../../../helpers/setUserInLocalStorage';
 
   
   export const RegisterNewUser=(data:IRegister)=> async(dispatch:Dispatch<RegisterAction>)=> {
@@ -19,7 +19,8 @@ import {
             type:RegisterActionTypes.REGISTER_SUCCESS,
             payload:token
         });
-        
+        setUserInLocalStorage(token,dispatch);
+        return Promise.resolve(token);
         
       
     }
