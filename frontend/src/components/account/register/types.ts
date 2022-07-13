@@ -10,6 +10,11 @@ export interface RegisterState {
   loader:boolean
 }
 
+export interface IRegisteredUser{
+  name:string,
+  email: string
+}
+
 export interface IRegister {
     email: string,
     name: string,     

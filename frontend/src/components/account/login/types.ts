@@ -3,6 +3,7 @@ export enum AuthActionTypes {
     LOGIN_AUTH_ERROR = "LOGIN_AUTH_ERROR",
     LOGOUT_AUTH = "LOGOUT_AUTH",
   }
+  
   export interface IUser {
       email: string,
       name: string,
@@ -12,7 +13,7 @@ export enum AuthActionTypes {
   export interface AuthState {
     user: IUser;
     isAuth: boolean;
-  }
+  }  
 
   export interface ILogin {
     email: string

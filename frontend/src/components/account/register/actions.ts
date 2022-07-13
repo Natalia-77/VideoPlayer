@@ -15,14 +15,18 @@ import {setUserInLocalStorage} from '../../../helpers/setUserInLocalStorage';
         dispatch({type:RegisterActionTypes.REGISTER_START});
         const response = await http.post("api/account/register",data);
         const token = response.data.token;
+        const {user} = response.data.item;
+        
         dispatch({
             type:RegisterActionTypes.REGISTER_SUCCESS,
             payload:token
         });
-        setUserInLocalStorage(token,dispatch);
-        return Promise.resolve(token);
-        
+        setUserInLocalStorage(token,user,dispatch);
+        return Promise.resolve(token);        
       
+    }
+    catch{
+
     }
 
     
