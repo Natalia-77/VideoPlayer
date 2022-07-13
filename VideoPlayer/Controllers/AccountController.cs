@@ -59,17 +59,15 @@ namespace VideoPlayer.Controllers
                 await _userManager.AddToRoleAsync(user, role.Name);
 
                 await _signInManager.SignInAsync(user, isPersistent: false);
-              
+
                 return Ok(new
                 {
                     token = _tokenService.CreateToken(user),
-                    data = new
+                    item = new
                     {
                         name = user.UserName,
-                        email = user.Email,
-                        
+                        email = user.Email
                     }
-
 
                 });
             }
