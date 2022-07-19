@@ -93,7 +93,12 @@ namespace VideoPlayer.Controllers
 
             return Ok(new
             {
-                token = _tokenService.CreateToken(user)
+                token = _tokenService.CreateToken(user),
+                item = new
+                {
+                    name = user.UserName,
+                    email = user.Email
+                }
             });
         }
 
